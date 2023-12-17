@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count a circle</title>
+</head>
+<script>
+    function hitungCircle() {
+      let jari2 = document.getElementById("jari2").value;
+      const phi = 3.14;
+      
+      let luas = phi * jari2 * jari2;
+
+      let keliling = 2 * phi * jari2;
+
+      console.log("luas:" + luas);
+      console.log("keliling" + keliling);
+
+      let hasilLuas = document.getElementById("hasilLuas");
+      let hasilKeliling = document.getElementById("hasilKeliling");
+
+      hasilLuas.innerHTML = luas;
+      hasilKeliling.innerHTML = keliling;
+    }
+
+    hitungCircle();
+</script>
+    <body>
+        <h1>Menghitung Luas dan Keliling</h1>
+        <div>
+            <label for="jari2">Masukkan Jari-Jari Lingkaran</label>
+            <input type="number" id="jari2" />
+            <button onclick="hitungCircle()">Result</button>
+        </div>
+        <p>
+        Luas Lingkaran : <span id="hasilLuas">0</span>
+        <br />
+        Keliling Lingkaran : <span id="hasilKeliling">0</span>
+        </p>
+    </body>
+</html>
